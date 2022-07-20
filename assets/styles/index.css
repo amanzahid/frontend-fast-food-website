@@ -1,0 +1,114 @@
+.offers,
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.offers-list,
+.menu-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    width: 70%;
+    padding: 2rem 0;
+}
+.menu-list {
+    justify-content: center;
+    width: 90%;
+}
+.menu-item,
+.offer {
+    width: 25rem;
+    height: 12rem;
+    background: rgb(255, 255, 255);
+    color: rgb(80, 35, 20);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    box-shadow: 3px 3px 10px rgba(80, 35, 20, 0.5);
+    margin: 1rem 0;
+}
+.menu-item {
+    height: 10rem;
+    width: 28rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+.menu-item-img {
+    height: 6rem;
+}
+.offer-img {
+    width: 15rem;
+}
+.offer-description {
+    padding: 0 1rem;
+}
+.menu-item-description {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-item-head {
+    width: 45%;
+}
+.menu-item-title {
+    font-size: 1.1rem;
+    margin: 0;
+}
+.offer-title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.menu-item-ingredients,
+.offer-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-item-ingredients {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-item-ingredient,
+.offer-item {
+    font-size: 0.7rem;
+    color: rgb(214, 35, 0);
+}
+.menu-item-ingredient {
+    margin: 0 0.2rem;
+}
+.menu-item-ingredient::after {
+    content: ",";
+}
+.menu-item-ingredient:last-of-type::after {
+    content: "";
+}
+.menu-item-price {
+    color: rgb(179, 28, 0);
+    margin: 0;
+    font-size: 2rem;
+}
+.offer-price {
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+}
+.order-now {
+    text-decoration: none;
+    color: rgb(245, 235, 220);
+    background: rgb(179, 28, 0);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(80, 35, 20, 0.5);
+}
+.menu-item .order-now {
+    padding: 0.3rem 0.5rem;
+}
+.order-now:hover {
+    background: rgb(214, 35, 0);
+}

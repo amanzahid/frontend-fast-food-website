@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&display=swap");
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+*::-moz-selection {
+    color: rgb(214, 35, 0);
+    background: rgb(245, 235, 220);
+}
+*::selection {
+    color: rgb(214, 35, 0);
+    background: rgb(245, 235, 220);
+}
+body,
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: rgb(245, 235, 220);
+    display: grid;
+    grid-template-rows: 5rem auto fit-content(38rem);
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+.main-header {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background: rgb(245, 235, 220);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    box-shadow: 3px 5px 5px rgba(80, 35, 20, 0.5);
+    z-index: 100;
+}
+.main-header__logo {
+    position: absolute;
+    background: rgb(245, 235, 220);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 135, 50);
+    width: 8rem;
+    height: 7rem;
+    border-radius: 50%;
+    box-shadow: 0px 5px 5px rgba(80, 35, 20, 0.5);
+}
+.main-header__logo h1 {
+    margin: 0;
+    font-size: 2.3rem;
+    line-height: 2.1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    font-family: "Kaushan Script", cursive;
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+}
+.main-nav__items {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.main-nav__item {
+    margin: 0.5rem;
+}
+.main-nav__link {
+    /* font-family: 'Mate SC', serif; */
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+    text-decoration: none;
+    color: rgb(80, 35, 20);
+    padding-bottom: 5px;
+}
+.main-nav__link:hover {
+    color: rgb(214, 35, 0);
+}
+.main-nav__link.active {
+    color: rgb(214, 35, 0);
+    border-bottom: 3px solid rgb(214, 35, 0);
+}
+.main-header__cta {
+    position: absolute;
+    right: 2rem;
+    text-decoration: none;
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+    color: rgb(245, 235, 220);
+    background: rgb(214, 35, 0);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+}
+.main-header__cta:hover {
+    background: rgb(179, 28, 0);
+}
+main {
+    grid-area: main;
+}
+.page-header {
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    background: rgb(214, 35, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+}
+.page-header h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: "Roboto Slab", serif;
+    color: rgb(245, 235, 220);
+}
+.page-header__categories {
+    position: absolute;
+    bottom: 0.5rem;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.page-header__categories-item {
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+.page-header__categories-item.active,
+.page-header__categories-item:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(179, 28, 0);
+}
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 0;
+    background: rgb(43, 2, 0);
+}
+footer hr {
+    width: 80%;
+}
+.footer-nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-nav__items {
+    font-family: "Roboto Slab", serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-nav__items h3 {
+    margin: 0;
+    color: rgb(245, 235, 220);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.footer-nav__link {
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    color: rgb(187, 163, 145);
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+.footer-nav__link:hover {
+    text-decoration: underline;
+}
+.footer {
+    padding-top: 2rem;
+    width: 80%;
+}
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-social h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    font-family: "Kaushan Script", cursive;
+    color: rgb(245, 235, 220);
+}
+.footer-social__link {
+    color: rgb(245, 235, 220);
+    font-size: 1.7rem;
+    margin: 0 0.5rem;
+}
+.fa-instagram:hover {
+    background: -webkit-linear-gradient(rgb(209, 0, 0), rgb(255, 81, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-facebook-square:hover {
+    background: rgb(0, 61, 126);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-youtube:hover {
+    background: rgb(255, 0, 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-twitter:hover {
+    background: rgb(0, 119, 255);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.footer-links {
+    padding-top: 2rem;
+}
+.footer-text p,
+.footer-link {
+    text-decoration: none;
+    color: rgb(187, 163, 145);
+    margin-right: 0.5rem;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8rem;
+    position: relative;
+}
+.footer-link:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -7px;
+    top: 0;
+    height: 100%;
+}
+.footer-link:hover {
+    text-decoration: underline;
+}
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
